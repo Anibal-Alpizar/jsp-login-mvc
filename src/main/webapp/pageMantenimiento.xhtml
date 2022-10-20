@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div>
+                  <div class="baseMantenimiento">
+                
+                <br></br><br></br>
+                <div class="botones">
+                    <h:commandButton value="Limpiar" actionListener="#{BeanMantenimiento.limpiar()}">
+                    </h:commandButton>
+                    <h:commandButton value="Imprimir" action="#{BeanMantenimiento.imprime()}" 
+                                     style="margin-left: 0.75em">
+                    </h:commandButton>
+
+                
+                </div>
+                <br></br><br></br>
+                
+                
+                <h:outputLabel> Cédula: </h:outputLabel>
+                <h:inputText value="#{BeanMantenimiento.ced}" 
+                             style="margin-left: 0.50em"></h:inputText>
+                
+                
+                <br></br><br></br>
+                
+                <h:outputLabel> Nombre: </h:outputLabel>
+                <h:inputText value="#{BeanMantenimiento.nombre}" 
+                             style="margin-left: 0.50em"></h:inputText>
+                <br></br><br></br>
+                
+                <h:outputLabel> Edad: </h:outputLabel>
+                <h:inputText value="#{BeanMantenimiento.edad}" 
+                             style="margin-left: 0.50em"></h:inputText>
+                
+                <h:outputLabel> Estado Civil: </h:outputLabel>
+                <h:selectOneMenu onchange="submit()" value="#{BeanMantenimiento.estadoCivil}" 
+                                 style="margin-left: 0.50em; width: 8em">
+
+                    <f:selectItems value="#{BeanMantenimiento.onbtieneEstadoCivil()}"/>
+
+                </h:selectOneMenu>
+                
+                <br></br><br></br>
+                
+                <h:outputLabel> Salario: </h:outputLabel>
+                <h:inputText value="#{BeanMantenimiento.salario}" 
+                             style="margin-left: 0.50em"></h:inputText>
+                
+                <br></br><br></br>
+                  <h:outputLabel>Provincia: </h:outputLabel>
+                  <h:selectOneMenu onchange="submit()" value="#{BeanMantenimiento.provincia}" 
+                                 style="margin-left: 0.50em; width: 8em">
+
+                    <f:selectItems value="#{BeanMantenimiento.onbtieneProvincia()}"/>
+
+                </h:selectOneMenu>
+                
+                  
+                    <br></br><br></br>
+                
+                <h:outputLabel> Resumen: </h:outputLabel>
+                <br></br>
+                <h:inputTextarea readonly="true" value="#{BeanMantenimiento.hilera}" 
+                                 style="width: 38em; height: 15em"></h:inputTextarea>
+               
+                
+            </div>
+            </div>   
+        </h:form>
+    </h:body>
+</html>
+

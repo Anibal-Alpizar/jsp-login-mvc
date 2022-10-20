@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+   
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+           <h:form>
+            
+               <div class="base" style="width: 200px; margin: auto; border: 1px solid">
+                
+                   <div style="margin-left: 8px">
+                <h2> Iniciar Sesión </h2>
+                
+                <h:outputLabel> Usuario: </h:outputLabel>
+                <br></br>
+                <h:inputText value="#{Bean208470478.usuario}"></h:inputText>
+                <br></br><br></br>
+                
+                <h:outputLabel> Contraseña: </h:outputLabel>
+                <br></br>
+                <h:inputSecret value="#{Bean208470478.password}"></h:inputSecret>
+                <br></br><br></br>
+                <br></br><br></br>
+                
+                <h:commandButton value="Ingresar" action="#{Bean208470478.ingresar()}">
+                </h:commandButton>
+                <h:commandButton value="Cancelar" actionListener="#{BeanIngreso901100400.limpiarCampos()}" 
+                                 style="margin-left: 0.25em"></h:commandButton>
+                <br></br><br></br>
+                
+                
+                </div>
+            </div>
+            
+        </h:form>
+    </h:body>
+</html>
+
